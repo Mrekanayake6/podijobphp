@@ -24,9 +24,9 @@
 
     <header class="navbar">
 
-        <div class="logo">
+        <a href="index.php" class="logo">
             podi<span>JOB</span>
-        </div>
+        </a>
 
         <nav class="nav-links">
 

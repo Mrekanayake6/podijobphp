@@ -1753,3 +1753,290 @@ input::-webkit-contacts-auto-fill-button {
         font-size: 26px;
     }
 }
+
+/* =========================================================
+   FORGOT PASSWORD
+========================================================= */
+
+.forgot-password-form {
+    display: none;
+    width: 100%;
+    animation: forgotFade .25s ease;
+}
+
+.forgot-password-form.active {
+    display: block;
+}
+
+.forgot-step {
+    display: none;
+}
+
+.forgot-step.active {
+    display: block;
+    animation: forgotFade .25s ease;
+}
+
+@keyframes forgotFade {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* ICON */
+
+.forgot-icon {
+    width: 64px;
+    height: 64px;
+
+    margin: 5px auto 18px;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 28px;
+
+    background: var(--navy2);
+    color: var(--amber-light);
+
+    border: 1px solid rgba(255,255,255,.08);
+}
+
+
+/* TITLE */
+
+.forgot-title {
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.forgot-title h3 {
+    margin: 0 0 8px;
+
+    color: var(--ivory);
+
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.forgot-title p {
+    margin: 0;
+
+    color: #9aa6b5;
+
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+
+/* BACK BUTTON */
+
+.forgot-back-btn {
+    width: 100%;
+
+    border: none;
+    background: transparent;
+
+    color: #9aa6b5;
+
+    margin-top: 15px;
+
+    padding: 10px;
+
+    cursor: pointer;
+
+    font-size: 13px;
+
+    transition: .2s ease;
+}
+
+.forgot-back-btn:hover {
+    color: var(--amber-light);
+}
+
+
+/* OTP */
+
+.otp-container {
+    display: flex;
+    justify-content: center;
+    gap: 9px;
+
+    margin: 25px 0 18px;
+}
+
+.otp-input {
+    width: 43px;
+    height: 50px;
+
+    border-radius: 10px;
+
+    border: 1px solid rgba(255,255,255,.12);
+
+    background: var(--navy2);
+
+    color: var(--ivory);
+
+    text-align: center;
+
+    font-size: 20px;
+    font-weight: 700;
+
+    outline: none;
+
+    transition: .2s ease;
+}
+
+.otp-input:focus {
+    border-color: var(--amber-light);
+
+    box-shadow:
+        0 0 0 2px rgba(255,193,7,.10);
+}
+
+
+/* TIMER */
+
+.otp-timer {
+    text-align: center;
+
+    color: #8995a5;
+
+    font-size: 12px;
+
+    margin-bottom: 8px;
+}
+
+.otp-timer strong {
+    color: var(--amber-light);
+
+    margin-left: 4px;
+}
+
+
+/* RESEND */
+
+.resend-otp-btn {
+    display: block;
+
+    margin: 0 auto 18px;
+
+    border: none;
+
+    background: transparent;
+
+    color: var(--amber-light);
+
+    font-size: 13px;
+
+    cursor: pointer;
+}
+
+.resend-otp-btn:disabled {
+    color: #566170;
+
+    cursor: not-allowed;
+}
+
+
+/* MESSAGE */
+
+.forgot-message {
+    min-height: 20px;
+
+    margin: 8px 0 12px;
+
+    text-align: center;
+
+    font-size: 12px;
+
+    line-height: 1.5;
+}
+
+
+/* PASSWORD RULES */
+
+.password-rules {
+    margin: -5px 0 18px;
+
+    padding: 10px 12px;
+
+    border-radius: 10px;
+
+    background: rgba(255,255,255,.03);
+}
+
+.password-rules div {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    color: #737f8e;
+
+    font-size: 11px;
+
+    margin: 5px 0;
+}
+
+.password-rules div.valid {
+    color: #69c98b;
+}
+
+.password-rules div span:first-child {
+    width: 14px;
+}
+
+
+/* SUCCESS */
+
+.forgot-success-icon {
+    width: 72px;
+    height: 72px;
+
+    margin: 15px auto 22px;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 35px;
+    font-weight: 700;
+
+    background: rgba(72, 187, 120, .12);
+
+    color: #69c98b;
+
+    border: 1px solid rgba(105,201,139,.25);
+}
+
+
+/* MOBILE */
+
+@media (max-width: 480px) {
+
+    .otp-container {
+        gap: 6px;
+    }
+
+    .otp-input {
+        width: 39px;
+        height: 47px;
+    }
+
+    .forgot-title h3 {
+        font-size: 20px;
+    }
+
+}

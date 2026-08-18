@@ -336,11 +336,7 @@ function loadJobs(data) {
             document.createElement("div");
 
 
-        card.className =
-            "job-card";
-
-
-        card.innerHTML = `
+             card.innerHTML = `
 
             <div class="job-top">
 

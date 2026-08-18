@@ -192,7 +192,7 @@
          RESULTS
     ========================================================= -->
 
-    <section class="results-section">
+      <section class="results-section">
 
         <div class="result-header">
 
@@ -212,7 +212,7 @@
 
 
 
-        <!-- pagination -->
+         <!-- pagination -->
 
         <div class="pagination" id="pagination"></div>
 

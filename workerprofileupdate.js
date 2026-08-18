@@ -494,7 +494,7 @@
 
                 // Done button click
                 document.querySelector("#successOverlay .btn-primary").onclick = function () {
-                    window.location.href = "workerdash.html";
+                    window.location.href = "workerdash.php";
                 };
             }, 500);
         });

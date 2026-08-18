@@ -12,7 +12,7 @@
         href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=Noto+Sans+Sinhala:wght@400;500;600;700;800&display=swap"
         rel="stylesheet">
 
-        <link rel="stylesheet" href="workerprofileupdate.css">
+    <link rel="stylesheet" href="workerprofileupdate.css">
 
 
 </head>
@@ -33,7 +33,7 @@
         <div class="lang-toggle" role="group" aria-label="Language">
             <button class="lang-btn" id="btnSi" onclick="setLang('si')">සිංහල</button>
             <button class="lang-btn" id="btnEn" onclick="setLang('en')">English</button>
-            
+
         </div>
     </div>
 
@@ -591,7 +591,7 @@
             </button>
         </div>
     </div>
-<script src="workerprofileupdate.js"></script>
+    <script src="workerprofileupdate.js"></script>
 </body>
 
 </html>

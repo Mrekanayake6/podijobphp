@@ -1584,7 +1584,7 @@ function goToUserProfile() {
     if (worker) {
 
         window.location.href =
-            "workerProfileUpdate.html";
+            "workerdash.php";
 
         return;
 

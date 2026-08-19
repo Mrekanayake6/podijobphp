@@ -104,10 +104,7 @@ body>.hero:first-of-type {
 }
 
 
-/*
-   If your hero is inside another wrapper,
-   this also helps the common page wrappers.
-*/
+
 
 .page-content {
     padding-top: 95px;

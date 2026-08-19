@@ -59,16 +59,12 @@ body::before {
     inset: 0;
 
     background:
-        radial-gradient(
-            circle at 15% 10%,
+        radial-gradient(circle at 15% 10%,
             rgba(227, 161, 60, .10),
-            transparent 38%
-        ),
-        radial-gradient(
-            circle at 85% 80%,
+            transparent 38%),
+        radial-gradient(circle at 85% 80%,
             rgba(191, 85, 53, .07),
-            transparent 38%
-        );
+            transparent 38%);
 
     z-index: -1;
     pointer-events: none;
@@ -150,7 +146,7 @@ button {
    doesn't hide underneath the fixed navbar.
 */
 
-body > .hero:first-of-type {
+body>.hero:first-of-type {
     margin-top: 95px;
 }
 
@@ -268,11 +264,9 @@ body > .hero:first-of-type {
     color: #111;
 
     background:
-        linear-gradient(
-            135deg,
+        linear-gradient(135deg,
             var(--amber),
-            #d97a56
-        );
+            #d97a56);
 }
 
 .user-login-btn:hover {
@@ -386,8 +380,7 @@ body > .hero:first-of-type {
     border-radius: 14px;
 
     box-shadow:
-        0 15px 40px
-        rgba(16, 29, 44, .16);
+        0 15px 40px rgba(16, 29, 44, .16);
 
     backdrop-filter: blur(20px);
 
@@ -488,11 +481,9 @@ body > .hero:first-of-type {
 
 .lang button.active {
     background:
-        linear-gradient(
-            135deg,
+        linear-gradient(135deg,
             var(--amber),
-            #d97a56
-        );
+            #d97a56);
 
     color: #111;
 }
@@ -535,16 +526,12 @@ body > .hero:first-of-type {
     -webkit-appearance: none;
 
     background-image:
-        linear-gradient(
-            45deg,
+        linear-gradient(45deg,
             transparent 50%,
-            var(--amber-light) 50%
-        ),
-        linear-gradient(
-            135deg,
+            var(--amber-light) 50%),
+        linear-gradient(135deg,
             var(--amber-light) 50%,
-            transparent 50%
-        );
+            transparent 50%);
 
     background-position:
         calc(100% - 21px) 22px,
@@ -569,8 +556,7 @@ body > .hero:first-of-type {
     background-color: #ffffff;
 
     box-shadow:
-        0 0 0 3px
-        rgba(227, 161, 60, .12);
+        0 0 0 3px rgba(227, 161, 60, .12);
 }
 
 .auth-field select:invalid {
@@ -633,10 +619,8 @@ body > .hero:first-of-type {
 
 .auth-modal {
     width:
-        min(
-            460px,
-            calc(100vw - 30px)
-        );
+        min(460px,
+            calc(100vw - 30px));
 
     max-height: 88vh;
 
@@ -649,8 +633,7 @@ body > .hero:first-of-type {
     border-radius: 26px;
 
     box-shadow:
-        0 25px 70px
-        rgba(16, 29, 44, .22);
+        0 25px 70px rgba(16, 29, 44, .22);
 
     backdrop-filter: blur(25px);
 
@@ -659,21 +642,18 @@ body > .hero:first-of-type {
     position: relative;
 
     transform:
-        scale(.9)
-        translateY(15px);
+        scale(.9) translateY(15px);
 
     opacity: 0;
 
     transition:
-        transform .35s
-        cubic-bezier(.2, .8, .2, 1),
+        transform .35s cubic-bezier(.2, .8, .2, 1),
         opacity .3s ease;
 }
 
 .auth-overlay.show .auth-modal {
     transform:
-        scale(1)
-        translateY(0);
+        scale(1) translateY(0);
 
     opacity: 1;
 }
@@ -711,11 +691,9 @@ body > .hero:first-of-type {
 
 .auth-close:hover {
     background:
-        linear-gradient(
-            135deg,
+        linear-gradient(135deg,
             var(--amber),
-            #d97a56
-        );
+            #d97a56);
 
     color: #111;
 
@@ -812,11 +790,9 @@ body > .hero:first-of-type {
 
 .auth-tab-btn.active {
     background:
-        linear-gradient(
-            135deg,
+        linear-gradient(135deg,
             var(--amber),
-            #d97a56
-        );
+            #d97a56);
 
     color: #111;
 }
@@ -911,8 +887,7 @@ body > .hero:first-of-type {
     background: #ffffff;
 
     box-shadow:
-        0 0 0 3px
-        rgba(227, 161, 60, .10);
+        0 0 0 3px rgba(227, 161, 60, .10);
 }
 
 
@@ -969,14 +944,10 @@ body > .hero:first-of-type {
     padding-right: 46px;
 }
 
-.auth-password-wrap
-input[type="password"]::-ms-reveal,
-.auth-password-wrap
-input[type="password"]::-ms-clear,
-.auth-password-wrap
-input::-webkit-credentials-auto-fill-button,
-.auth-password-wrap
-input::-webkit-contacts-auto-fill-button {
+.auth-password-wrap input[type="password"]::-ms-reveal,
+.auth-password-wrap input[type="password"]::-ms-clear,
+.auth-password-wrap input::-webkit-credentials-auto-fill-button,
+.auth-password-wrap input::-webkit-contacts-auto-fill-button {
 
     display: none !important;
 
@@ -1103,11 +1074,9 @@ input::-webkit-contacts-auto-fill-button {
     margin-top: 6px;
 
     background:
-        linear-gradient(
-            135deg,
+        linear-gradient(135deg,
             var(--amber),
-            #d97a56
-        );
+            #d97a56);
 
     display: flex;
 
@@ -1194,11 +1163,9 @@ input::-webkit-contacts-auto-fill-button {
     border-radius: 50%;
 
     background:
-        linear-gradient(
-            135deg,
+        linear-gradient(135deg,
             var(--amber),
-            #d97a56
-        );
+            #d97a56);
 
     color: #111;
 
@@ -1301,8 +1268,7 @@ input::-webkit-contacts-auto-fill-button {
         rgba(227, 161, 60, .5);
 
     box-shadow:
-        0 5px 18px
-        rgba(16, 29, 44, .10);
+        0 5px 18px rgba(16, 29, 44, .10);
 
     transform:
         translateY(-1px);
@@ -1359,10 +1325,8 @@ input::-webkit-contacts-auto-fill-button {
 
     .jobs-grid {
         grid-template-columns:
-            repeat(
-                2,
-                minmax(0, 1fr)
-            );
+            repeat(2,
+                minmax(0, 1fr));
     }
 }
 
@@ -1391,7 +1355,7 @@ input::-webkit-contacts-auto-fill-button {
        Total  = 82px
     */
 
-    body > .hero:first-of-type {
+    body>.hero:first-of-type {
         margin-top: 82px;
     }
 
@@ -1458,11 +1422,9 @@ input::-webkit-contacts-auto-fill-button {
 
     .hero h1 {
         font-size:
-            clamp(
-                30px,
+            clamp(30px,
                 9vw,
-                42px
-            );
+                42px);
 
         line-height: 1.25;
     }
@@ -1809,7 +1771,7 @@ input::-webkit-contacts-auto-fill-button {
     background: var(--navy2);
     color: var(--amber-light);
 
-    border: 1px solid rgba(255,255,255,.08);
+    border: 1px solid rgba(255, 255, 255, .08);
 }
 
 
@@ -1881,7 +1843,7 @@ input::-webkit-contacts-auto-fill-button {
 
     border-radius: 10px;
 
-    border: 1px solid rgba(255,255,255,.12);
+    border: 1px solid rgba(255, 255, 255, .12);
 
     background: var(--navy2);
 
@@ -1901,7 +1863,7 @@ input::-webkit-contacts-auto-fill-button {
     border-color: var(--amber-light);
 
     box-shadow:
-        0 0 0 2px rgba(255,193,7,.10);
+        0 0 0 2px rgba(255, 193, 7, .10);
 }
 
 
@@ -1973,7 +1935,7 @@ input::-webkit-contacts-auto-fill-button {
 
     border-radius: 10px;
 
-    background: rgba(255,255,255,.03);
+    background: rgba(255, 255, 255, .03);
 }
 
 .password-rules div {
@@ -2018,7 +1980,7 @@ input::-webkit-contacts-auto-fill-button {
 
     color: #69c98b;
 
-    border: 1px solid rgba(105,201,139,.25);
+    border: 1px solid rgba(105, 201, 139, .25);
 }
 
 

@@ -22,6 +22,8 @@
 <body>
 
     <?php include 'header.php'; ?>
+
+    
     <section class="hero">
 
         <h1>
@@ -192,7 +194,7 @@
          RESULTS
     ========================================================= -->
 
-      <section class="results-section">
+    <section class="results-section">
 
         <div class="result-header">
 
@@ -212,7 +214,7 @@
 
 
 
-         <!-- pagination -->
+        <!-- pagination -->
 
         <div class="pagination" id="pagination"></div>
 

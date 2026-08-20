@@ -164,7 +164,9 @@ body>.hero:first-of-type {
 /* =========================================================
    LOGO
 ========================================================= */
-
+.logo {
+    text-decoration: none;
+}
 .logo {
     font-family: Poppins, sans-serif;
     font-size: 30px;

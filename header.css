@@ -164,9 +164,7 @@ body>.hero:first-of-type {
 /* =========================================================
    LOGO
 ========================================================= */
-.logo {
-    text-decoration: none;
-}
+
 .logo {
     font-family: Poppins, sans-serif;
     font-size: 30px;
@@ -174,6 +172,7 @@ body>.hero:first-of-type {
     white-space: nowrap;
     flex-shrink: 0;
     color: var(--text-dark);
+    text-decoration: none;
 }
 
 .logo span {

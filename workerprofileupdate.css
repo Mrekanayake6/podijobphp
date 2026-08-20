@@ -1541,3 +1541,155 @@
           font-size: 13px;
       }
   }
+  .chip-input-box {
+    width: 100%;
+    min-height: 52px;
+
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+
+    padding: 8px 10px;
+
+    background: #fff;
+    border: 1px solid #d8dee6;
+    border-radius: 10px;
+
+    box-sizing: border-box;
+}
+
+.chip-input-box:focus-within {
+    border-color: var(--amber);
+    box-shadow: 0 0 0 3px rgba(227, 161, 60, 0.1);
+}
+
+
+/* Chips container */
+
+#areaChips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+}
+
+
+/* Individual city */
+
+.area-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+
+    padding: 7px 8px 7px 11px;
+
+    background: #f3f6f9;
+    border: 1px solid #dce3ea;
+    border-radius: 8px;
+
+    color: #1d2939;
+    font-size: 13px;
+    font-weight: 500;
+
+    white-space: nowrap;
+}
+
+
+/* Remove */
+
+.area-chip button {
+    width: 19px;
+    height: 19px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0;
+
+    border: none;
+    border-radius: 50%;
+
+    background: #e1e6eb;
+    color: #667085;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+.area-chip button:hover {
+    background: #d95d45;
+    color: white;
+}
+
+
+/* Input */
+
+#areasInput {
+    flex: 1;
+
+    min-width: 150px;
+    height: 34px;
+
+    border: none;
+    outline: none;
+
+    background: transparent;
+
+    font-size: 14px;
+    color: #1d2939;
+}
+
+
+/* Add button */
+
+#addAreaBtn {
+    flex-shrink: 0;
+
+    height: 36px;
+
+    padding: 0 14px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+
+    border: none;
+    border-radius: 7px;
+
+    background: var(--amber);
+    color: white;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+#addAreaBtn:hover {
+    background: var(--amber-light);
+}
+
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    .chip-input-box {
+        gap: 7px;
+        padding: 8px;
+    }
+
+    #areasInput {
+        min-width: 110px;
+    }
+
+    #addAreaBtn {
+        height: 36px;
+        padding: 0 12px;
+    }
+
+}

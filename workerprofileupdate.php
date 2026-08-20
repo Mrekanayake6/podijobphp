@@ -463,20 +463,13 @@
 
                 <div class="section-block">
                     <div class="field-grid">
-                        <div class="field" id="f-serviceCity">
-                            <label><span data-i18n="serviceCityLabel">Main City</span><span
-                                    class="req-star">*</span></label>
-                            <input type="text" id="serviceCity" data-i18n-ph="cityPh" placeholder="e.g. Gampaha">
-                            <div class="field-error"><svg width="12" height="12" viewBox="0 0 24 24" fill="none"
-                                    stroke="currentColor" stroke-width="2.5">
-                                    <circle cx="12" cy="12" r="10" />
-                                    <line x1="12" y1="8" x2="12" y2="13" />
-                                    <line x1="12" y1="16" x2="12.01" y2="16" />
-                                </svg><span data-i18n="cityError">Please enter your city</span></div>
-                        </div>
+
                         <div class="field" id="f-serviceDistrict">
-                            <label><span data-i18n="districtLabel">District</span><span
-                                    class="req-star">*</span></label>
+                            <label><span data-i18n="districtLabel">District</span><span class="locked-badge"><svg viewBox="0 0 24 24" fill="none"
+                                        stroke="currentColor" stroke-width="2.5">
+                                        <rect x="4" y="10" width="16" height="10" rx="2" />
+                                        <path d="M8 10V7a4 4 0 0 1 8 0v3" />
+                                    </svg><span data-i18n="autoFilled">Auto-filled</span></span></label>
                             <select id="serviceDistrict"></select>
                             <div class="field-error"><svg width="12" height="12" viewBox="0 0 24 24" fill="none"
                                     stroke="currentColor" stroke-width="2.5">
@@ -485,17 +478,51 @@
                                     <line x1="12" y1="16" x2="12.01" y2="16" />
                                 </svg><span data-i18n="districtError">Please select your district</span></div>
                         </div>
+
+                        <div class="field" id="f-serviceCity">
+                            <label><span data-i18n="serviceCityLabel">Main City</span><span class="locked-badge"><svg viewBox="0 0 24 24" fill="none"
+                                        stroke="currentColor" stroke-width="2.5">
+                                        <rect x="4" y="10" width="16" height="10" rx="2" />
+                                        <path d="M8 10V7a4 4 0 0 1 8 0v3" />
+                                    </svg><span data-i18n="autoFilled">Auto-filled</span></span></label>
+                            <input type="text" id="serviceCity" data-i18n-ph="cityPh" placeholder="e.g. Gampaha">
+                            <div class="field-error"><svg width="12" height="12" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2.5">
+                                    <circle cx="12" cy="12" r="10" />
+                                    <line x1="12" y1="8" x2="12" y2="13" />
+                                    <line x1="12" y1="16" x2="12.01" y2="16" />
+                                </svg><span data-i18n="cityError">Please enter your city</span></div>
+                        </div>
+
                     </div>
 
                     <div class="field">
-                        <label><span data-i18n="areasLabel">Areas Willing to Work</span><span class="opt-tag"
-                                data-i18n="optionalTag">(optional)</span></label>
+
+                        <label>
+                            <span data-i18n="areasLabel">Areas Willing to Work</span>
+                            <span class="opt-tag" data-i18n="optionalTag">(optional)</span>
+                        </label>
+
                         <div class="chip-input-box" id="areasBox">
-                            <input type="text" id="areasInput" data-i18n-ph="areasPh"
-                                placeholder="Type an area and press Enter e.g. Kottawa">
+
+                            <div id="areaChips"></div>
+
+                            <input
+                                type="text"
+                                id="areasInput"
+                                placeholder="Type an area e.g. Kottawa"
+                                autocomplete="off">
+
+                            <button type="button" id="addAreaBtn">
+                                <span data-i18n="addArea">Add</span> 
+                            </button>
+
                         </div>
-                        <div class="field-hint" data-i18n="areasHint">Add nearby towns or suburbs you're happy to travel
-                            to</div>
+
+                        <div class="field-hint">
+                            Add nearby towns or suburbs you're happy to travel to
+                        </div>
+
                     </div>
 
                     <div class="field">

@@ -21,20 +21,11 @@
 <body>
 
   <?php
-  /*
-|--------------------------------------------------------------------------
-| COMMON HEADER
-|--------------------------------------------------------------------------
-| Header eka me thanin load wenawa.
-| header.php athule <!DOCTYPE>, <html>, <head>, <body> danna epa.
-*/
+
   include 'header.php';
   ?>
 
-  <!-- =====================================================
-     WORKER PROFILE CONTENT
-     ===================================================== -->
-
+ 
   <section class="profile-hero">
 
     <div class="container">

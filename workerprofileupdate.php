@@ -599,8 +599,7 @@
         </form>
     </div>
 
-    <footer class="page-footer">© 2026 PodiJOB — <span data-i18n="footerNote">Built for Sri Lanka's skilled
-            workers</span></footer>
+  
 
     <!-- ================= SUCCESS OVERLAY ================= -->
     <div class="success-overlay" id="successOverlay">
@@ -619,6 +618,7 @@
         </div>
     </div>
     <script src="workerprofileupdate.js"></script>
+    <?php include 'footer.php'; ?>
 </body>
 
 </html>

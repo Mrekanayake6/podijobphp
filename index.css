@@ -154,109 +154,27 @@ body>.hero:first-of-type {
 }
 
 
-/* =========================================================
-   SKILL / JOB CATEGORY SELECT
-========================================================= */
-
-.auth-field select {
-    width: 100%;
-
-    height: 52px;
-
-    padding: 0 48px 0 16px;
-
-    border-radius: 12px;
-
-    border: 1px solid var(--border);
-
-    background-color: #ffffff;
-
-    color: var(--navy);
-
-    outline: none;
-
-    font-size: 14.5px;
-
-    font-family: inherit;
-
-    cursor: pointer;
-
-    transition:
-        border-color .25s ease,
-        box-shadow .25s ease,
-        background-color .25s ease;
-
-    appearance: none;
-    -webkit-appearance: none;
-
-    background-image:
-        linear-gradient(45deg,
-            transparent 50%,
-            var(--amber-light) 50%),
-        linear-gradient(135deg,
-            var(--amber-light) 50%,
-            transparent 50%);
-
-    background-position:
-        calc(100% - 21px) 22px,
-        calc(100% - 15px) 22px;
-
-    background-size:
-        6px 6px,
-        6px 6px;
-
-    background-repeat: no-repeat;
-}
-
-.auth-field select:hover {
-    border-color: rgba(227, 161, 60, .55);
-
-    background-color: #ffffff;
-}
-
-.auth-field select:focus {
-    border-color: var(--amber);
-
-    background-color: #ffffff;
-
-    box-shadow:
-        0 0 0 3px rgba(227, 161, 60, .12);
-}
-
-.auth-field select:invalid {
-    color: var(--soft);
-}
-
-.auth-field select option {
-    background: #ffffff;
-
-    color: var(--navy);
-
-    font-family: inherit;
-}
-
-.auth-field select option:checked {
-    background: var(--amber);
-
-    color: #111;
-}
 
 
 /* =========================================================
-   SEARCH
-========================================================= */
+   SEARCH PANEL - FIXED WIDTH / SINHALA FRIENDLY
+   ========================================================= */
 
 .search-panel {
-    width: min(950px, calc(100% - 20px));
-
+    width: min(1100px, calc(100% - 20px));
     margin: 45px auto;
 
     padding: 25px;
 
     display: grid;
 
+    /*
+       Search input = smaller
+       Selectors = wider
+       Button = normal
+    */
     grid-template-columns:
-        2fr 1fr 1fr 1fr auto;
+        1.6fr 1.25fr 1.35fr 1.25fr auto;
 
     gap: 12px;
 
@@ -270,17 +188,25 @@ body>.hero:first-of-type {
         0 12px 35px rgba(16, 29, 44, .06);
 
     backdrop-filter: blur(20px);
+
+    box-sizing: border-box;
 }
+
+
+/* =========================================================
+   INPUT + SELECT
+   ========================================================= */
 
 .search-panel input,
 .search-panel select {
-    width: 100%;
 
+    width: 100%;
     min-width: 0;
 
     height: 55px;
 
-    padding: 0 16px;
+    padding-left: 15px;
+    padding-right: 42px;
 
     border-radius: 12px;
 
@@ -293,34 +219,163 @@ body>.hero:first-of-type {
     outline: none;
 
     font-size: 14px;
+
+    font-family:
+        Inter,
+        "Noto Sans Sinhala",
+        sans-serif;
+
+    box-sizing: border-box;
 }
 
+
+/* =========================================================
+   SEARCH INPUT
+   ========================================================= */
+
+.search-panel input {
+
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+
 .search-panel input::placeholder {
+
     color: #8a95a1;
 }
 
+
+/* =========================================================
+   SELECT ARROW
+   ========================================================= */
+
+.search-panel select {
+
+    appearance: none;
+    -webkit-appearance: none;
+
+    cursor: pointer;
+
+    background-image:
+
+        linear-gradient(45deg,
+            transparent 50%,
+            var(--amber-light) 50%),
+
+        linear-gradient(135deg,
+            var(--amber-light) 50%,
+            transparent 50%);
+
+    background-position:
+
+        calc(100% - 19px) 23px,
+        calc(100% - 13px) 23px;
+
+    background-size:
+        6px 6px,
+        6px 6px;
+
+    background-repeat: no-repeat;
+}
+
+
+/* =========================================================
+   SELECT OPTIONS
+   ========================================================= */
+
+.search-panel select option {
+
+    background: #ffffff;
+
+    color: var(--text-dark);
+
+    font-family:
+        Inter,
+        "Noto Sans Sinhala",
+        sans-serif;
+
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   SINHALA
+   ========================================================= */
+
+html[lang="si"] .search-panel input,
+html[lang="si"] .search-panel select {
+
+    font-family:
+        "Noto Sans Sinhala",
+        Inter,
+        sans-serif;
+
+}
+
+
+/*
+   Sinhala selectors need a little more room.
+*/
+
+html[lang="si"] .search-panel select {
+
+    font-size: 13px;
+
+    padding-left: 13px;
+    padding-right: 42px;
+}
+
+
+html[lang="si"] .search-panel select option {
+
+    font-family:
+        "Noto Sans Sinhala",
+        Inter,
+        sans-serif;
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   FOCUS
+   ========================================================= */
+
 .search-panel input:focus,
 .search-panel select:focus {
+
     border-color: var(--amber);
 
     box-shadow:
         0 0 0 3px rgba(227, 161, 60, .10);
 }
 
-.search-panel option {
-    background: #ffffff;
 
-    color: var(--text-dark);
+/* =========================================================
+   HOVER
+   ========================================================= */
+
+.search-panel select:hover {
+
+    border-color:
+        rgba(227, 161, 60, .55);
 }
 
+
+/* =========================================================
+   SEARCH BUTTON
+   ========================================================= */
+
 .search-btn {
+
     height: 55px;
 
-    padding: 0 25px;
+    padding: 0 27px;
 
     border: none;
 
-    border-radius: 12px;
+    border-radius: 30px;
 
     cursor: pointer;
 
@@ -336,6 +391,7 @@ body>.hero:first-of-type {
     display: inline-flex;
 
     align-items: center;
+
     justify-content: center;
 
     text-align: center;
@@ -345,8 +401,116 @@ body>.hero:first-of-type {
     transition: .3s;
 }
 
+
 .search-btn:hover {
+
     filter: brightness(1.08);
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1100px) {
+
+    .search-panel {
+
+        width:
+            min(850px,
+                calc(100% - 30px));
+
+        grid-template-columns:
+            1fr 1fr;
+
+        gap: 12px;
+    }
+
+
+    .search-panel input,
+    .search-panel select,
+    .search-btn {
+
+        width: 100%;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 750px) {
+
+    .search-panel {
+
+        width: 100%;
+
+        margin: 30px auto;
+
+        padding: 15px;
+
+        grid-template-columns: 1fr;
+
+        gap: 10px;
+
+        border-radius: 18px;
+    }
+
+
+    .search-panel input,
+    .search-panel select {
+
+        height: 50px;
+
+        width: 100%;
+    }
+
+
+    .search-btn {
+
+        width: 100%;
+
+        height: 50px;
+    }
+
+
+    html[lang="si"] .search-panel select {
+
+        font-size: 13px;
+
+        padding-left: 13px;
+        padding-right: 40px;
+    }
+}
+
+
+/* =========================================================
+   SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 430px) {
+
+    .search-panel {
+
+        width: 100%;
+
+        padding: 12px;
+    }
+
+
+    .search-panel input,
+    .search-panel select,
+    .search-btn {
+
+        height: 48px;
+    }
+
+
+    html[lang="si"] .search-panel select {
+
+        font-size: 12.5px;
+    }
 }
 
 
@@ -449,11 +613,9 @@ body>.hero:first-of-type {
     height: 3px;
 
     background:
-        linear-gradient(
-            90deg,
+        linear-gradient(90deg,
             var(--amber),
-            #d97a56
-        );
+            #d97a56);
 
     opacity: .8;
 }
@@ -621,11 +783,9 @@ body>.hero:first-of-type {
     border-radius: 12px;
 
     background:
-        linear-gradient(
-            135deg,
+        linear-gradient(135deg,
             var(--amber),
-            #d97a56
-        );
+            #d97a56);
 
     color: #111;
 

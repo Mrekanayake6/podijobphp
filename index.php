@@ -225,6 +225,7 @@
 
 
     <script src="index.js"></script>
+      <?php include 'footer.php'; ?>
 
 </body>
 

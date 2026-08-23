@@ -107,7 +107,43 @@ const workerTranslations = {
         similar_title: "Similar Workers",
 
         footer_text:
-            "© 2026 PodiJOB. Connecting Sri Lanka's skilled workers with the people who need them."
+            "© 2026 PodiJOB. Connecting Sri Lanka's skilled workers with the people who need them.",
+
+        reviews_title: "Reviews & Ratings",
+
+        reviews_lower: "reviews",
+
+        write_review: "Write a Review",
+
+        review_2_weeks: "2 weeks ago",
+
+        review_1_month: "1 month ago",
+
+        review_2_months: "2 months ago",
+
+        review_text_1:
+            "Very professional and completed the electrical work on time. Explained everything clearly before starting.",
+
+        review_text_2:
+            "Fixed our switchboard issue quickly and the pricing was fair. Would definitely hire again.",
+
+        review_text_3:
+            "Good work overall, arrived a little later than planned but the wiring job was neat and safe.",
+
+       
+
+        your_rating: "Your Rating",
+
+        your_comment: "Your Comment",
+
+        review_placeholder:
+            "Write your experience about this worker...",
+
+        cancel: "Cancel",
+
+        submit_review: "Submit Review"
+
+
 
     },
 
@@ -295,7 +331,39 @@ const workerTranslations = {
             "සමාන සේවකයින්",
 
         footer_text:
-            "© 2026 PodiJOB. ශ්‍රී ලංකාවේ දක්ෂ සේවකයින් ඔවුන් අවශ්‍ය පුද්ගලයින් සමඟ සම්බන්ධ කරයි."
+            "© 2026 PodiJOB. ශ්‍රී ලංකාවේ දක්ෂ සේවකයින් ඔවුන් අවශ්‍ය පුද්ගලයින් සමඟ සම්බන්ධ කරයි.",
+        reviews_title: "සමාලෝචන සහ ශ්‍රේණිගත කිරීම්",
+
+        reviews_lower: "සමාලෝචන",
+
+        write_review: "සමාලෝචනයක් ලියන්න",
+
+        review_2_weeks: "සති 2කට පෙර",
+
+        review_1_month: "මාස 1කට පෙර",
+
+        review_2_months: "මාස 2කට පෙර",
+
+        review_text_1:
+            "ඉතා වෘත්තීයමය සේවාවක් ලබා දුන් අතර විදුලි වැඩ කටයුතු නියමිත වේලාවට අවසන් කළා. වැඩ ආරම්භ කිරීමට පෙර සියල්ල පැහැදිලිව විස්තර කළා.",
+
+        review_text_2:
+            "අපගේ switchboard ගැටලුව ඉක්මනින් විසඳා දුන්නා. අය කිරීමත් සාධාරණයි. නැවතත් අනිවාර්යයෙන්ම සේවය ලබාගන්නවා.",
+
+        review_text_3:
+            "සමස්තයක් ලෙස හොඳ වැඩක්. සැලසුම් කළ වේලාවට වඩා ටිකක් ප්‍රමාද වී පැමිණියත් wiring වැඩය පිළිවෙළට සහ ආරක්ෂිතව සිදු කර තිබුණා.",
+
+        your_rating: "ඔබේ ශ්‍රේණිගත කිරීම",
+
+        your_comment: "ඔබේ අදහස",
+
+        review_placeholder:
+            "මෙම සේවකයා පිළිබඳ ඔබේ අත්දැකීම ලියන්න...",
+
+        cancel: "අවලංගු කරන්න",
+
+        submit_review: "සමාලෝචනය ඉදිරිපත් කරන්න"
+
 
     }
 
@@ -571,6 +639,20 @@ function changeLanguage(lang) {
             ? "si"
             : "en";
 
+
+    // ==========================================
+    // UPDATE PLACEHOLDERS
+    // ==========================================
+    document.querySelectorAll("[data-i18n-placeholder]").forEach(element => {
+
+        const key = element.getAttribute("data-i18n-placeholder");
+
+        if (translations[lang] && translations[lang][key]) {
+            element.placeholder = translations[lang][key];
+        }
+
+    });
+
 }
 
 
@@ -651,5 +733,252 @@ function requestJob() {
             : "You want to send a job request."
 
     );
+
+}
+
+/* =====================================================
+   REVIEW MODAL
+   ===================================================== */
+
+let selectedRating = 0;
+
+
+/* OPEN MODAL */
+
+function openReviewModal() {
+
+    const modal = document.getElementById("reviewModal");
+
+    if (!modal) return;
+
+    modal.classList.add("active");
+
+    document.body.style.overflow = "hidden";
+
+}
+
+
+/* CLOSE MODAL */
+
+function closeReviewModal() {
+
+    const modal = document.getElementById("reviewModal");
+
+    if (!modal) return;
+
+    modal.classList.remove("active");
+
+    document.body.style.overflow = "";
+
+}
+
+
+/* =====================================================
+   STAR RATING
+   ===================================================== */
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const stars = document.querySelectorAll(
+        "#ratingStars button"
+    );
+
+    const comment = document.getElementById(
+        "reviewComment"
+    );
+
+    const charCount = document.getElementById(
+        "reviewCharCount"
+    );
+
+
+    stars.forEach(function (star) {
+
+        star.addEventListener("click", function () {
+
+            selectedRating = Number(
+                this.dataset.rating
+            );
+
+            document.getElementById(
+                "selectedRating"
+            ).value = selectedRating;
+
+
+            stars.forEach(function (item) {
+
+                const rating = Number(
+                    item.dataset.rating
+                );
+
+                item.classList.toggle(
+                    "active",
+                    rating <= selectedRating
+                );
+
+            });
+
+        });
+
+
+        star.addEventListener("mouseenter", function () {
+
+            const hoverRating = Number(
+                this.dataset.rating
+            );
+
+            stars.forEach(function (item) {
+
+                const rating = Number(
+                    item.dataset.rating
+                );
+
+                item.classList.toggle(
+                    "active",
+                    rating <= hoverRating
+                );
+
+            });
+
+        });
+
+    });
+
+
+    const ratingContainer =
+        document.getElementById("ratingStars");
+
+
+    if (ratingContainer) {
+
+        ratingContainer.addEventListener(
+            "mouseleave",
+            function () {
+
+                stars.forEach(function (item) {
+
+                    const rating = Number(
+                        item.dataset.rating
+                    );
+
+                    item.classList.toggle(
+                        "active",
+                        rating <= selectedRating
+                    );
+
+                });
+
+            }
+        );
+
+    }
+
+
+    /* CHARACTER COUNT */
+
+    if (comment && charCount) {
+
+        comment.addEventListener(
+            "input",
+            function () {
+
+                charCount.textContent =
+                    comment.value.length;
+
+            }
+        );
+
+    }
+
+});
+
+
+/* =====================================================
+   SUBMIT REVIEW
+   ===================================================== */
+
+function submitReview() {
+
+    const rating =
+        Number(
+            document.getElementById(
+                "selectedRating"
+            ).value
+        );
+
+    const comment =
+        document.getElementById(
+            "reviewComment"
+        ).value.trim();
+
+
+    /* CHECK RATING */
+
+    if (rating === 0) {
+
+        alert("Please select a rating.");
+
+        return;
+    }
+
+
+    /* CHECK COMMENT */
+
+    if (comment.length < 5) {
+
+        alert(
+            "Please write at least 5 characters."
+        );
+
+        return;
+    }
+
+
+    /*
+       TEMPORARY
+
+       Later me data PHP/MySQL ekata
+       AJAX fetch ekakin send karanna puluwan.
+    */
+
+    console.log({
+        rating: rating,
+        comment: comment
+    });
+
+
+    alert(
+        "Thank you! Your review has been submitted."
+    );
+
+
+    closeReviewModal();
+
+
+    /* RESET FORM */
+
+    document.getElementById(
+        "reviewComment"
+    ).value = "";
+
+    document.getElementById(
+        "reviewCharCount"
+    ).textContent = "0";
+
+    document.getElementById(
+        "selectedRating"
+    ).value = "0";
+
+
+    selectedRating = 0;
+
+
+    document.querySelectorAll(
+        "#ratingStars button"
+    ).forEach(function (star) {
+
+        star.classList.remove("active");
+
+    });
 
 }

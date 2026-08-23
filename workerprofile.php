@@ -25,7 +25,10 @@
   include 'header.php';
   ?>
 
- 
+  <!-- =====================================================
+     WORKER PROFILE CONTENT
+     ===================================================== -->
+
   <section class="profile-hero">
 
     <div class="container">
@@ -712,7 +715,11 @@
 
 
           <!-- REVIEWS -->
-          <div class="card">
+          <!-- =====================================================
+     REVIEWS & RATINGS
+     ===================================================== -->
+
+          <div class="card reviews-card">
 
             <div class="card-title">
 
@@ -727,6 +734,7 @@
             </div>
 
 
+            <!-- REVIEW SUMMARY -->
             <div class="review-summary">
 
               <div class="big-rating">
@@ -751,6 +759,26 @@
             </div>
 
 
+            <!-- WRITE REVIEW BUTTON -->
+            <div class="review-action">
+
+              <button
+                type="button"
+                class="btn btn-primary"
+                onclick="openReviewModal()">
+
+                ⭐
+
+                <span data-i18n="write_review">
+                  Write a Review
+                </span>
+
+              </button>
+
+            </div>
+
+
+            <!-- REVIEW 1 -->
             <div class="review-card">
 
               <div class="review-top">
@@ -766,10 +794,10 @@
                     Kasun Fernando
                   </div>
 
-                  <div
-                    class="review-date"
-                    data-i18n="review1_date">
-                    2 weeks ago
+                  <div class="review-date">
+                    <span data-i18n="review_2_weeks">
+                      2 weeks ago
+                    </span>
                   </div>
 
                 </div>
@@ -780,18 +808,19 @@
 
               </div>
 
+              <p class="review-text"
+                data-i18n="review_text_1">
 
-              <p
-                class="review-text"
-                data-i18n="review1_text">
                 Very professional and completed the electrical
                 work on time. Explained everything clearly
                 before starting.
+
               </p>
 
             </div>
 
 
+            <!-- REVIEW 2 -->
             <div class="review-card">
 
               <div class="review-top">
@@ -807,10 +836,10 @@
                     Nadeesha Silva
                   </div>
 
-                  <div
-                    class="review-date"
-                    data-i18n="review2_date">
-                    1 month ago
+                  <div class="review-date">
+                    <span data-i18n="review_1_month">
+                      1 month ago
+                    </span>
                   </div>
 
                 </div>
@@ -821,17 +850,18 @@
 
               </div>
 
+              <p class="review-text"
+                data-i18n="review_text_2">
 
-              <p
-                class="review-text"
-                data-i18n="review2_text">
                 Fixed our switchboard issue quickly and the
                 pricing was fair. Would definitely hire again.
+
               </p>
 
             </div>
 
 
+            <!-- REVIEW 3 -->
             <div class="review-card">
 
               <div class="review-top">
@@ -847,10 +877,10 @@
                     Ruwan Bandara
                   </div>
 
-                  <div
-                    class="review-date"
-                    data-i18n="review3_date">
-                    2 months ago
+                  <div class="review-date">
+                    <span data-i18n="review_2_months">
+                      2 months ago
+                    </span>
                   </div>
 
                 </div>
@@ -861,13 +891,175 @@
 
               </div>
 
+              <p class="review-text"
+                data-i18n="review_text_3">
 
-              <p
-                class="review-text"
-                data-i18n="review3_text">
                 Good work overall, arrived a little later than
                 planned but the wiring job was neat and safe.
+
               </p>
+
+            </div>
+
+          </div>
+
+
+          <!-- =====================================================
+     WRITE REVIEW MODAL
+     ===================================================== -->
+
+          <div
+            class="review-modal"
+            id="reviewModal">
+
+            <div
+              class="review-modal-overlay"
+              onclick="closeReviewModal()">
+            </div>
+
+
+            <div class="review-modal-box">
+
+              <button
+                type="button"
+                class="review-close"
+                onclick="closeReviewModal()">
+
+                &times;
+
+              </button>
+
+
+              <div class="review-modal-title">
+
+                ⭐
+
+                <h3 data-i18n="write_review">
+                  Write a Review
+                </h3>
+
+              </div>
+
+
+              <p
+                class="review-modal-subtitle"
+                data-i18n="review_modal_subtitle">
+
+                Share your experience with this worker.
+
+              </p>
+
+
+              <!-- STAR RATING -->
+              <div class="rating-input">
+
+                <label data-i18n="your_rating">
+                  Your Rating
+                </label>
+
+
+                <div
+                  class="rating-stars"
+                  id="ratingStars">
+
+                  <button
+                    type="button"
+                    data-rating="1">
+                    ★
+                  </button>
+
+                  <button
+                    type="button"
+                    data-rating="2">
+                    ★
+                  </button>
+
+                  <button
+                    type="button"
+                    data-rating="3">
+                    ★
+                  </button>
+
+                  <button
+                    type="button"
+                    data-rating="4">
+                    ★
+                  </button>
+
+                  <button
+                    type="button"
+                    data-rating="5">
+                    ★
+                  </button>
+
+                </div>
+
+
+                <input
+                  type="hidden"
+                  id="selectedRating"
+                  value="0">
+
+              </div>
+
+
+              <!-- COMMENT -->
+              <div class="review-input-group">
+
+                <label
+                  for="reviewComment"
+                  data-i18n="your_comment">
+
+                  Your Comment
+
+                </label>
+
+                <textarea
+                  id="reviewComment"
+                  rows="5"
+                  maxlength="500"
+                  data-si="මෙම සේවකයා පිළිබඳ ඔබේ අත්දැකීම ලියන්න..."
+                  data-en="Write your experience about this worker..."
+                  placeholder="Write your experience about this worker..."></textarea>
+
+
+
+                <div class="character-count">
+
+                  <span id="reviewCharCount">
+                    0
+                  </span>/500
+
+                </div>
+
+              </div>
+
+
+              <!-- BUTTONS -->
+              <div class="review-modal-actions">
+
+                <button
+                  type="button"
+                  class="btn btn-outline"
+                  onclick="closeReviewModal()"
+                  data-i18n="cancel">
+
+                  Cancel
+
+                </button>
+
+
+                <button
+                  type="button"
+                  class="btn btn-primary"
+                  onclick="submitReview()"
+                  data-i18n="submit_review">
+
+                  Submit Review
+
+                </button>
+
+              </div>
 
             </div>
 
@@ -1005,23 +1197,15 @@
   </section>
 
 
-  <footer>
 
-    <div class="container">
-
-      <span data-i18n="footer_text">
-        © 2026 PodiJOB. Connecting Sri Lanka's skilled workers
-        with the people who need them.
-      </span>
-
-    </div>
-
-  </footer>
 
 
   <!-- Worker Profile JS -->
   <script src="workerprofile.js"></script>
+  <?php
 
+  include 'footer.php';
+  ?>
 </body>
 
 </html>

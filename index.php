@@ -23,7 +23,7 @@
 
     <?php include 'header.php'; ?>
 
-    
+
     <section class="hero">
 
         <h1>
@@ -221,11 +221,184 @@
     </section>
 
 
+    <section class="about-podijob" id="about">
+
+        <div class="about-container">
+
+            <!-- LEFT CONTENT -->
+            <div class="about-content">
+
+                <span class="about-badge">
+                    <i class="ri-hand-heart-line"></i>
+
+                    <span
+                        data-en="About Podi Job"
+                        data-si="පොඩි ජොබ් ගැන">
+                        About Podi Job
+                    </span>
+                </span>
+
+
+                <h2>
+                    <span
+                        data-en="Small Jobs."
+                        data-si="පොඩි වැඩ.">
+                        Small Jobs.
+                    </span>
+
+                    <span
+                        data-en="Big Opportunities."
+                        data-si="විශාල අවස්ථා.">
+                        Big Opportunities.
+                    </span>
+                </h2>
+
+
+                <p
+                    class="about-main-text"
+                    data-en="Podi Job is a simple platform that connects people who need everyday services with trusted workers in their local area."
+                    data-si="පොඩි ජොබ් යනු දෛනික සේවාවන් අවශ්‍ය පුද්ගලයින් ඔවුන්ගේ ප්‍රදේශයේ විශ්වාසදායක සේවකයින් සමඟ සම්බන්ධ කරන සරල වේදිකාවකි.">
+                    Podi Job is a simple platform that connects people who need
+                    everyday services with trusted workers in their local area.
+                </p>
+
+
+                <p
+                    class="about-description"
+                    data-en="From electrical work and plumbing to painting, cleaning, gardening and repairs, Podi Job makes it easier to find the right person for the job while helping local workers discover new opportunities."
+                    data-si="විදුලි වැඩ, ජලනල වැඩ, පින්තාරු කිරීම, පිරිසිදු කිරීම, ගෙවතු වැඩ සහ අලුත්වැඩියා කිරීම් වැනි විවිධ සේවාවන් සඳහා සුදුසු පුද්ගලයා සොයා ගැනීම පහසු කරන අතර, දේශීය සේවකයින්ට නව රැකියා අවස්ථා සොයා ගැනීමටද පොඩි ජොබ් උපකාරී වේ.">
+                    From electrical work and plumbing to painting, cleaning,
+                    gardening and repairs, Podi Job makes it easier to find the
+                    right person for the job while helping local workers discover
+                    new opportunities.
+                </p>
+
+
+                <!-- BUTTONS -->
+                <div class="about-actions">
+
+                    <a href="#resu" class="about-btn primary">
+
+                        <span
+                            data-en="Find a Worker"
+                            data-si="සේවකයෙකු සොයන්න">
+                            Find a Worker
+                        </span>
+
+                        <i class="ri-arrow-right-line"></i>
+
+                    </a>
+
+
+                    <a href="#register" class="about-btn secondary">
+
+                        <span
+                            data-en="Join as a Worker"
+                            data-si="සේවකයෙකු ලෙස එක්වන්න">
+                            Join as a Worker
+                        </span>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- RIGHT VISUAL -->
+            <div class="about-visual">
+
+                <!-- MAIN CARD -->
+                <div class="about-card main-card">
+
+                    <div class="about-icon">
+                        <i class="ri-user-community-line"></i>
+                    </div>
+
+                    <div>
+
+                        <strong
+                            data-en="People Connecting"
+                            data-si="මිනිසුන් සම්බන්ධ කිරීම">
+                            People Connecting
+                        </strong>
+
+                        <span
+                            data-en="Customers & Workers"
+                            data-si="පාරිභෝගිකයින් සහ සේවකයින්">
+                            Customers & Workers
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- CARD ONE -->
+                <div class="about-card small-card card-one">
+
+                    <div class="mini-icon">
+                        <i class="ri-tools-line"></i>
+                    </div>
+
+                    <div>
+
+                        <strong
+                            data-en="Small Jobs"
+                            data-si="පොඩි වැඩ">
+                            Small Jobs
+                        </strong>
+
+                        <span
+                            data-en="Everyday Services"
+                            data-si="දෛනික සේවාවන්">
+                            Everyday Services
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- CARD TWO -->
+                <div class="about-card small-card card-two">
+
+                    <div class="mini-icon">
+                        <i class="ri-star-smile-line"></i>
+                    </div>
+
+                    <div>
+
+                        <strong
+                            data-en="Trusted Workers"
+                            data-si="විශ්වාසදායක සේවකයින්">
+                            Trusted Workers
+                        </strong>
+
+                        <span
+                            data-en="Ratings & Reviews"
+                            data-si="ශ්‍රේණිගත කිරීම් සහ අදහස්">
+                            Ratings & Reviews
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="about-circle circle-one"></div>
+                <div class="about-circle circle-two"></div>
+
+            </div>
+
+        </div>
+
+    </section>
 
 
 
     <script src="index.js"></script>
-      <?php include 'footer.php'; ?>
+    <?php include 'footer.php'; ?>
 
 </body>
 

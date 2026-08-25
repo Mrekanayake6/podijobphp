@@ -2167,3 +2167,612 @@ html[lang="si"] .search-panel select option {
     }
 
 }
+
+/* =========================================================
+   ABOUT PODI JOB
+========================================================= */
+
+.about-podijob {
+    position: relative;
+    padding: 100px 20px;
+    background: var(--ivory);
+    overflow: hidden;
+}
+
+.about-container {
+    width: min(1180px, 100%);
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    align-items: center;
+    gap: 80px;
+}
+
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.about-content {
+    position: relative;
+    z-index: 2;
+}
+
+.about-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    padding: 8px 14px;
+
+    background: rgba(227, 161, 60, 0.12);
+    border: 1px solid rgba(227, 161, 60, 0.25);
+
+    color: var(--amber);
+
+    border-radius: 30px;
+
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+}
+
+.about-badge i {
+    font-size: 17px;
+}
+
+
+.about-content h2 {
+    margin: 22px 0 18px;
+
+    max-width: 600px;
+
+    font-size: clamp(40px, 5vw, 64px);
+    line-height: 1.05;
+
+    color: var(--navy);
+
+    letter-spacing: -2px;
+}
+
+.about-content h2 span {
+    display: block;
+
+    background: linear-gradient(90deg,
+            var(--amber),
+            var(--brick));
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+.about-main-text {
+    max-width: 590px;
+
+    margin: 0 0 15px;
+
+    color: var(--navy2);
+
+    font-size: 19px;
+    line-height: 1.65;
+    font-weight: 600;
+}
+
+
+.about-description {
+    max-width: 590px;
+
+    margin: 0;
+
+    color: var(--soft);
+
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+.about-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    margin-top: 30px;
+}
+
+.about-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+
+    min-height: 48px;
+    padding: 0 20px;
+
+    border-radius: 12px;
+
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    transition: 0.25s ease;
+}
+
+
+.about-btn.primary {
+    color: #fff;
+    background: var(--navy);
+    border: 1px solid var(--navy);
+}
+
+.about-btn.primary:hover {
+    transform: translateY(-2px);
+    background: var(--navy2);
+}
+
+
+.about-btn.secondary {
+    color: var(--navy);
+    background: transparent;
+    border: 1px solid rgba(7, 13, 20, 0.18);
+}
+
+.about-btn.secondary:hover {
+    border-color: var(--amber);
+    color: var(--amber);
+}
+
+
+/* =========================================================
+   VISUAL AREA
+========================================================= */
+
+.about-visual {
+    position: relative;
+
+    min-height: 430px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* Background circles */
+
+.about-circle {
+    position: absolute;
+
+    border-radius: 50%;
+
+    pointer-events: none;
+}
+
+.circle-one {
+    width: 310px;
+    height: 310px;
+
+    background: rgba(227, 161, 60, 0.12);
+
+    right: 40px;
+    top: 40px;
+}
+
+.circle-two {
+    width: 190px;
+    height: 190px;
+
+    background: rgba(191, 85, 53, 0.08);
+
+    left: 50px;
+    bottom: 30px;
+}
+
+
+/* =========================================================
+   MAIN CARD
+========================================================= */
+
+.about-card {
+    position: absolute;
+
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    background: rgba(255, 255, 255, 0.88);
+
+    border: 1px solid rgba(7, 13, 20, 0.08);
+
+    box-shadow:
+        0 25px 60px rgba(7, 13, 20, 0.10);
+
+    backdrop-filter: blur(12px);
+
+    border-radius: 20px;
+
+    z-index: 3;
+}
+
+
+.main-card {
+    width: 310px;
+
+    padding: 22px;
+
+    top: 95px;
+    left: 50%;
+
+    transform: translateX(-50%);
+}
+
+
+.about-icon {
+    width: 58px;
+    height: 58px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 16px;
+
+    background: var(--navy);
+
+    color: var(--amber);
+
+    font-size: 27px;
+}
+
+
+.about-card strong {
+    display: block;
+
+    color: var(--navy);
+
+    font-size: 15px;
+    margin-bottom: 4px;
+}
+
+.about-card span {
+    display: block;
+
+    color: var(--soft);
+
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   SMALL CARDS
+========================================================= */
+
+.small-card {
+    width: 230px;
+
+    padding: 16px;
+
+    z-index: 4;
+}
+
+.card-one {
+    left: 5px;
+    top: 205px;
+}
+
+.card-two {
+    right: 0;
+    bottom: 80px;
+}
+
+
+.mini-icon {
+    width: 43px;
+    height: 43px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+
+    background: rgba(227, 161, 60, 0.13);
+
+    color: var(--amber);
+
+    font-size: 20px;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .about-podijob {
+        padding: 75px 20px;
+    }
+
+    .about-container {
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+    }
+
+    .about-content {
+        text-align: center;
+    }
+
+    .about-content h2 {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .about-main-text,
+    .about-description {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .about-actions {
+        justify-content: center;
+    }
+
+    .about-visual {
+        min-height: 400px;
+        width: 100%;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .about-podijob {
+        padding: 60px 16px;
+    }
+
+    .about-content h2 {
+        font-size: 40px;
+        letter-spacing: -1.5px;
+    }
+
+    .about-main-text {
+        font-size: 17px;
+    }
+
+    .about-description {
+        font-size: 14px;
+    }
+
+    .about-actions {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .about-btn {
+        width: 100%;
+        max-width: 280px;
+    }
+
+    .about-visual {
+        min-height: 360px;
+    }
+
+    .main-card {
+        width: 280px;
+        top: 70px;
+    }
+
+    .card-one {
+        left: 0;
+        top: 195px;
+        width: 205px;
+    }
+
+    .card-two {
+        right: 0;
+        bottom: 35px;
+        width: 205px;
+    }
+
+    .circle-one {
+        width: 260px;
+        height: 260px;
+    }
+
+    .circle-two {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+/* =========================================================
+   ABOUT FLOATING ANIMATIONS
+========================================================= */
+
+.about-visual .main-card {
+    animation: aboutMainFloat 4s ease-in-out infinite;
+}
+
+.about-visual .card-one {
+    animation: aboutLeftFloat 4.5s ease-in-out infinite;
+    animation-delay: -1s;
+}
+
+.about-visual .card-two {
+    animation: aboutRightFloat 5s ease-in-out infinite;
+    animation-delay: -2s;
+}
+
+
+/* Background circles */
+
+.about-visual .circle-one {
+    animation: aboutCircleOne 7s ease-in-out infinite;
+}
+
+.about-visual .circle-two {
+    animation: aboutCircleTwo 6s ease-in-out infinite;
+}
+
+
+/* Main Card */
+
+@keyframes aboutMainFloat {
+
+    0%,
+    100% {
+        transform: translateX(-50%) translateY(0);
+    }
+
+    50% {
+        transform: translateX(-50%) translateY(-12px);
+    }
+}
+
+
+/* Left Card */
+
+@keyframes aboutLeftFloat {
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-10px) rotate(-1deg);
+    }
+}
+
+
+/* Right Card */
+
+@keyframes aboutRightFloat {
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-13px) rotate(1deg);
+    }
+}
+
+
+/* Circle 1 */
+
+@keyframes aboutCircleOne {
+
+    0%,
+    100% {
+        transform: scale(1) translate(0, 0);
+    }
+
+    50% {
+        transform: scale(1.06) translate(8px, -8px);
+    }
+}
+
+
+/* Circle 2 */
+
+@keyframes aboutCircleTwo {
+
+    0%,
+    100% {
+        transform: scale(1) translate(0, 0);
+    }
+
+    50% {
+        transform: scale(1.08) translate(-7px, 7px);
+    }
+}
+
+
+/* =========================================================
+   HOVER EFFECT
+========================================================= */
+
+.about-card {
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.about-card:hover {
+    box-shadow:
+        0 30px 70px rgba(7, 13, 20, 0.16);
+}
+
+
+/* =========================================================
+   ICON ANIMATION
+========================================================= */
+
+.about-icon i {
+    display: inline-block;
+    animation: iconPulse 3s ease-in-out infinite;
+}
+
+.mini-icon i {
+    display: inline-block;
+    animation: iconRotate 4s ease-in-out infinite;
+}
+
+
+@keyframes iconPulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.12);
+    }
+}
+
+
+@keyframes iconRotate {
+
+    0%,
+    100% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(-8deg);
+    }
+}
+
+
+/* =========================================================
+   REDUCE MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .about-visual .main-card,
+    .about-visual .card-one,
+    .about-visual .card-two,
+    .about-visual .circle-one,
+    .about-visual .circle-two,
+    .about-icon i,
+    .mini-icon i {
+        animation: none;
+    }
+
+}

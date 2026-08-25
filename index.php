@@ -396,9 +396,6 @@
         </div>
 
     </section>
-
-
-
     <script src="index.js"></script>
     <?php include 'footer.php'; ?>
 
